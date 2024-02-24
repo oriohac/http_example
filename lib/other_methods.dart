@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -103,7 +104,7 @@ Future<void> postData() async {
             "title": 'Introduction to API',
             "body": 'This is just a demo of what you can do'
           }));
-      if (response.statusCode == 200) {
+      if (response.statusCode == 201) {
         ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
           behavior: SnackBarBehavior.floating,
           backgroundColor: Color.fromARGB(255, 122, 245, 126),
